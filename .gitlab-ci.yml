@@ -8,6 +8,7 @@ pages:
     - \cp -r js/. .public
     - \cp -r html/. .public
     - \cp -r .public/. public
+
   artifacts:
     paths:
       - public
