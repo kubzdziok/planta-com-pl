@@ -3,12 +3,13 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
+    - \rm -f .public
+    - \rm -f public
     - \cp -r css/. .public
     - \cp -r images/. .public
     - \cp -r js/. .public
     - \cp -r html/. .public
     - \cp -r .public/. public
-
   artifacts:
     paths:
       - public
