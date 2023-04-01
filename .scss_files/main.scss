@@ -1,0 +1,261 @@
+$lato-font: 'Lato', sans-serif;
+$primary-green: #2C5545;
+$advent-font: 'Advent Pro', sans-serif;
+
+* {
+  a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+nav {
+  margin: auto;
+  max-width: 1200px;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: $lato-font;
+  font-weight: 400;
+  color: white;
+
+  .nav-float {
+    display: inline-block;
+    float: right;
+  }
+
+  .nav-float-logo {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin: 15px 0 10px 0;
+    padding: 0;
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    li {
+      text-transform: uppercase;
+
+      .nav-sizing {
+        float: right;
+        width: 232px;
+        text-align: center;
+        background-color: $primary-green;
+        border-radius: 1px;
+        padding: 5px 0;
+        margin: 0 5px 0 0;
+        transition: 0.4s ease-in;
+        border: 2px solid $primary-green;
+      }
+
+      .nav-sizing:hover {
+        cursor: pointer;
+        font-weight: 700;
+        background-color: #fff;
+        color: $primary-green;
+      }
+
+      .contact-btn {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.site-selector {
+  width: 100%;
+  height: 700px;
+  min-height: 60vh;
+  max-height: 90vh;
+
+  .main-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    color: white;
+    font-family: $lato-font;
+    font-size: 24px;
+    text-transform: uppercase;
+    justify-items: stretch;
+
+    .grid-els {
+      overflow: hidden;
+      transition: 0.4s ease-in;
+      border-radius: 2px;
+
+      a {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px 20px;
+        transition: all 0.4s ease-in;
+        z-index: 100;
+        letter-spacing: 2px;
+        font-size: 19px;
+      }
+
+      a:hover {
+        background-color: $primary-green;
+        border-radius: 1px;
+        transition: all 0.4s ease-in;
+      }
+
+      a:hover ~ .mask-div {
+        transition: all 0.4s ease-out;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+      }
+
+      a:hover ~ .mask-div-br {
+        transition: all 0.4s ease-out;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+
+      }
+
+      .mask-div {
+        transition: all 0.4s ease-in;
+        position: relative;
+        transform: translate(0, -30%);
+        height: 200%;
+        width: 100%;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
+      }
+    }
+
+    .grid-el-1 {
+      background-image: url("/images/main-site/planta-1.jpg");
+      background-size: cover;
+      background-position: center;
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
+
+    .grid-el-2 {
+      background-image: url("/images/main-site/planta-2.jpg");
+      background-size: cover;
+      background-position: center;
+      grid-column: 3/5;
+      grid-row: 1/2;
+    }
+
+    .grid-el-3 {
+      background-image: url("/images/main-site/planta-3.jpg");
+      background-size: cover;
+      background-position: center;
+      grid-column: 5/6;
+      grid-row: 1/3;
+    }
+
+    .grid-el-4 {
+      background-image: url("/images/main-site/planta-4.jpg");
+      background-size: cover;
+      background-position: center;
+      grid-column: 1/2;
+      grid-row: 2/4;
+    }
+
+    .grid-el-5 {
+      background-image: url("/images/main-site/planta-5.jpg");
+      background-size: cover;
+      background-position: center;
+      grid-column: 2/4;
+      grid-row: 3/4;
+    }
+
+    .grid-el-6 {
+      background-image: url("/images/main-site/planta-6.jpeg");
+      background-size: cover;
+      background-position: center;
+      grid-column: 4/6;
+      grid-row: 3/4;
+    }
+
+    .grid-el-7 {
+      background-image: url("/images/main-site/planta-logo-no-border.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      grid-column: 2/5;
+      grid-row: 2/3;
+    }
+  }
+}
+
+#designing-main {
+  max-width: 1200px;
+  margin: auto;
+
+  .sub-site-image, .sub-site-text {
+    float: left;
+    height: 430px;
+    margin-bottom: 30px;
+  }
+
+  .sub-site-text {
+    width: 60%;
+  }
+
+  .sub-site-image {
+    width: 40%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .sub-site-carousele {
+    overflow: hidden;
+    width: 100%;
+    height: 230px;
+
+    a {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.footer {
+  max-width: 1200px;
+  margin: auto;
+  color: #2C5545;
+
+  div {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    margin-top: 50px;
+    color: #2C5545;
+  }
+}
+
+
+
+
+
+
+
+
