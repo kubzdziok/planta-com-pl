@@ -16,4 +16,5 @@ pages:
       - public
     expire_in: 3 days
   only:
+    - devel
     - main
