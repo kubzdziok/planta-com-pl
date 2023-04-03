@@ -3,16 +3,18 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-    - \rm -f .public
-    - \rm -f public
-    - \cp -r css/. .public
-    - \cp -r images/. .public
-    - \cp -r js/. .public
-    - \cp -r html/. .public
-    - \cp -r .public/. public
+    - rm -rf .public;
+    - rm -rf public;
+    - mkdir .public;
+    - \cp -r *.html .public;
+    - \cp -r css/ .public;
+    - \cp -r images/ .public;
+    - \cp -r js/ .public;
+    - \cp -r .public/. public;
   artifacts:
     paths:
       - public
     expire_in: 10 days
   only:
+    - designing-page
     - main
