@@ -194,106 +194,110 @@ nav ul li .contact-btn {
   object-fit: cover;
 }
 #designing-main .carousel-container {
-  width: 1100px;
-  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+  width: 1200px;
+  margin: auto;
 }
-@media (max-width: 768px) {
-  #designing-main .carousel-container {
-    width: 95%;
-  }
-}
-#designing-main .inner-carousel {
-  width: 100%;
-  height: 400px;
+#designing-main .carousel-container .inner-carousel {
+  width: 90%;
+  height: 220px;
+  margin: auto;
   overflow: hidden;
 }
-#designing-main .track {
+#designing-main .carousel-container .inner-carousel .track {
   display: inline-flex;
   height: 100%;
   transition: transform 0.2s ease-in-out;
 }
-#designing-main .card-container {
-  width: 275px;
-  height: 400px;
+#designing-main .carousel-container .inner-carousel .track .card-container {
+  width: 220px;
+  height: 220px;
   flex-shrink: 0;
-  padding-right: 10px;
+  padding-right: 20px;
 }
-@media (max-width: 768px) {
-  #designing-main .card-container {
-    width: 184px;
-  }
-}
-#designing-main .card {
+#designing-main .carousel-container .inner-carousel .track .card-container .card {
   width: 100%;
   height: 100%;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;*/
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 10px;
+  border-radius: 1px;
 }
-#designing-main .card1 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card1 {
   background-image: url("https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg");
 }
-#designing-main .card2 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card2 {
   background-image: url("https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg");
 }
-#designing-main .card3 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card3 {
   background-image: url("https://cdn.pixabay.com/photo/2016/08/11/23/48/italy-1587287_960_720.jpg");
 }
-#designing-main .card4 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card4 {
   background-image: url("https://cdn.pixabay.com/photo/2014/08/29/03/02/horse-430441_960_720.jpg");
 }
-#designing-main .card5 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card5 {
   background-image: url("https://cdn.pixabay.com/photo/2014/12/08/17/52/mare-561221_960_720.jpg");
 }
-#designing-main .card6 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card6 {
   background-image: url("https://cdn.pixabay.com/photo/2017/02/08/17/24/butterfly-2049567_960_720.jpg");
 }
-#designing-main .card7 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card7 {
   background-image: url("https://cdn.pixabay.com/photo/2017/11/30/22/00/pumpkin-2989569_960_720.jpg");
 }
-#designing-main .card8 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card8 {
   background-image: url("https://cdn.pixabay.com/photo/2016/07/24/22/25/woman-1539416_960_720.jpg");
 }
-#designing-main .card9 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card9 {
   background-image: url("https://cdn.pixabay.com/photo/2017/11/15/09/28/music-player-2951399_960_720.jpg");
 }
-#designing-main .card10 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card10 {
   background-image: url("https://cdn.pixabay.com/photo/2018/02/23/04/38/laptop-3174729_960_720.jpg");
 }
-#designing-main .card11 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card11 {
   background-image: url("https://cdn.pixabay.com/photo/2016/03/09/09/30/woman-1245817_960_720.jpg");
 }
-#designing-main .card12 {
+#designing-main .carousel-container .inner-carousel .track .card-container .card12 {
   background-image: url("https://cdn.pixabay.com/photo/2016/11/08/05/31/adorable-1807544_960_720.jpg");
 }
-#designing-main .carousle-nav button {
+@media (max-width: 768px) {
+  #designing-main .carousel-container .inner-carousel .track .card-container {
+    width: 184px;
+  }
+}
+#designing-main .carousel-container .inner-carousel .carousele-nav button {
   position: absolute;
   top: 50%;
   transform: translatey(-50%);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  outline: none;
-  border: 1px solid #000;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: none;
   cursor: pointer;
 }
-#designing-main .carousele-nav .prev {
-  left: -30px;
+#designing-main .carousel-container .inner-carousel .carousele-nav .prev {
   display: none;
+  left: 0;
 }
-#designing-main .carousele-nav .prev.show {
+#designing-main .carousel-container .inner-carousel .carousele-nav .prev img {
+  height: 100%;
+}
+#designing-main .carousel-container .inner-carousel .carousele-nav .prev.show {
   display: block;
 }
-#designing-main .carousele-nav .next {
-  right: -30px;
+#designing-main .carousel-container .inner-carousel .carousele-nav .next {
+  right: 0;
 }
-#designing-main .carousele-nav .next.hide {
+#designing-main .carousel-container .inner-carousel .carousele-nav .next img {
+  height: 100%;
+}
+#designing-main .carousel-container .inner-carousel .carousele-nav .next.hide {
   display: none;
+}
+@media (max-width: 768px) {
+  #designing-main .carousel-container .carousel-container {
+    width: 95%;
+  }
 }
 
 .footer {
