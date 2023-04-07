@@ -17,9 +17,9 @@ nav {
   font-weight: 400;
   color: white;
   padding: 0 10px;
+  display: flex;
 }
-nav .nav-float {
-  display: inline-block;
+nav .nav-item {
   float: right;
 }
 nav .nav-float-logo {
@@ -31,7 +31,6 @@ nav .nav-float-logo img {
   width: 100%;
 }
 nav ul {
-  overflow: hidden;
   width: 100%;
   height: auto;
   margin: 15px 0 10px 0;
@@ -39,34 +38,6 @@ nav ul {
 }
 nav ul a:visited {
   text-decoration: none;
-}
-nav ul .hamburger-menu {
-  display: none;
-  cursor: pointer;
-}
-nav ul .hamburger-menu .bar {
-  display: block;
-  width: 30px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #2C5545;
-}
-@media (max-width: 767px) {
-  nav ul .hamburger-menu {
-    display: inline-block;
-    float: right;
-  }
-  nav ul .hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  nav ul .hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  nav ul .hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
 }
 nav ul li {
   text-transform: uppercase;
@@ -82,16 +53,6 @@ nav ul li .nav-sizing {
   transition: 0.4s ease-in;
   border: 2px solid #2C5545;
 }
-@media (max-width: 767px) {
-  nav ul li .nav-sizing {
-    display: none;
-  }
-}
-@media (max-width: 1023px) {
-  nav ul li .nav-sizing {
-    width: 170px;
-  }
-}
 @media (min-width: 1024px) {
   nav ul li .nav-sizing:hover {
     cursor: pointer;
@@ -103,31 +64,28 @@ nav ul li .nav-sizing {
 nav ul li .contact-btn {
   margin-right: 0;
 }
-
-@media (max-width: 767px) {
-  nav {
-    position: fixed;
-    width: 100%;
-    padding: 0;
-    background-color: white;
-  }
-  nav .hamburger-menu {
-    padding: 0 10px;
-  }
-  nav ul {
-    margin: 10px 0 10px 0;
-  }
-  .site-selector {
-    padding-top: 52px;
-  }
+nav .hamburger-menu {
+  display: none;
+  cursor: pointer;
 }
+nav .hamburger-menu .bar {
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 7px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #FFFFFF;
+}
+
 .site-selector {
   width: 100%;
   height: 700px;
   min-height: 60vh;
   max-height: 90vh;
 }
-.site-selector .main-container {
+
+.main-container {
   max-width: 1200px;
   height: 100%;
   margin: auto;
@@ -139,12 +97,12 @@ nav ul li .contact-btn {
   text-transform: uppercase;
   padding: 0 10px;
 }
-.site-selector .main-container .grid-els {
+.main-container .grid-els {
   overflow: hidden;
   transition: 0.4s ease-in;
   border-radius: 2px;
 }
-.site-selector .main-container .grid-els a {
+.main-container .grid-els a {
   position: relative;
   display: block;
   text-align: center;
@@ -153,28 +111,23 @@ nav ul li .contact-btn {
   transform: translate(-50%, -50%);
   padding: 15px 20px;
   transition: all 0.4s ease-in;
-  z-index: 100;
+  z-index: 10;
   letter-spacing: 2px;
   font-size: 19px;
   width: fit-content;
 }
-@media (min-width: 767px) and (max-width: 1023px) {
-  .site-selector .main-container .grid-els .realizations, .site-selector .main-container .grid-els .care {
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
-}
 @media (min-width: 1024px) {
-  .site-selector .main-container .grid-els a:hover {
+  .main-container .grid-els a:hover {
     background-color: #2C5545;
     border-radius: 1px;
     transition: all 0.4s ease-in;
   }
-  .site-selector .main-container .grid-els a:hover ~ .mask-div {
+  .main-container .grid-els a:hover ~ .mask-div {
     transition: all 0.4s ease-out;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
   }
 }
-.site-selector .main-container .grid-els .mask-div {
+.main-container .grid-els .mask-div {
   transition: all 0.4s ease-in;
   position: relative;
   transform: translate(0, -30%);
@@ -182,49 +135,49 @@ nav ul li .contact-btn {
   width: 100%;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
-.site-selector .main-container .grid-el-1 {
+.main-container .grid-el-1 {
   background-image: url("/images/glowna/planta-1.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/3;
   grid-row: 1/2;
 }
-.site-selector .main-container .grid-el-2 {
+.main-container .grid-el-2 {
   background-image: url("/images/glowna/planta-2.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 3/5;
   grid-row: 1/2;
 }
-.site-selector .main-container .grid-el-3 {
+.main-container .grid-el-3 {
   background-image: url("/images/glowna/planta-3.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 5/6;
   grid-row: 1/3;
 }
-.site-selector .main-container .grid-el-4 {
+.main-container .grid-el-4 {
   background-image: url("/images/glowna/planta-4.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 1/2;
   grid-row: 2/4;
 }
-.site-selector .main-container .grid-el-5 {
+.main-container .grid-el-5 {
   background-image: url("/images/glowna/planta-5.jpg");
   background-size: cover;
   background-position: center;
   grid-column: 2/4;
   grid-row: 3/4;
 }
-.site-selector .main-container .grid-el-6 {
+.main-container .grid-el-6 {
   background-image: url("/images/glowna/planta-6.jpeg");
   background-size: cover;
   background-position: center;
   grid-column: 4/6;
   grid-row: 3/4;
 }
-.site-selector .main-container .grid-el-7 {
+.main-container .grid-el-7 {
   background-image: url("/images/glowna/planta-logo-no-border.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -283,6 +236,69 @@ nav ul li .contact-btn {
   background-color: #fff;
   margin-top: 50px;
   color: #2C5545;
+}
+
+@media (max-width: 767px) {
+  nav .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 49px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #2C5545;
+    width: fit-content;
+    margin: 0;
+    z-index: 20;
+    transition: 0.3s;
+    text-align: center;
+  }
+  nav .nav-menu .nav-item {
+    overflow: hidden;
+    float: none;
+  }
+  nav .nav-menu .nav-item .nav-sizing {
+    padding: 15px 0;
+    margin: 0;
+  }
+  nav .nav-menu .nav-item:nth-child(1), nav .nav-menu .nav-item:nth-child(2) {
+    border-bottom: solid 1px #FFFFFF;
+  }
+  nav .nav-menu.active {
+    padding: 0 15px;
+    margin: 10px 10px 0 0;
+    right: 0;
+  }
+  nav .hamburger-menu {
+    position: fixed;
+    display: block;
+    right: 0;
+    padding: 8px 13px;
+    margin: 5px 10px;
+    background-color: #2C5545;
+    z-index: 20;
+  }
+  nav .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  nav .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  nav .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .site-selector {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 550px) and (max-width: 1023px) {
+  .site-selector .main-container .grid-els .realizations, .site-selector .main-container .grid-els .care {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  nav ul li .nav-sizing {
+    width: 170px;
+  }
 }
 
 /*# sourceMappingURL=main_scss.css.map */

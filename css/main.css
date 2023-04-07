@@ -44,7 +44,7 @@ nav .nav-logo img {
     width: auto;
 }
 
-nav .nav-float {
+nav .nav-item {
     display: inline-block;
     float: right;
 }
