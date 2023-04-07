@@ -13,8 +13,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,300;1,500;1,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,300;1,500;1,600&family=Lato:wght@400;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="/css/main_scss.css">
+    <link rel="stylesheet" href="/css/owl-carousele/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl-carousele/owl.theme.default.min.css">
     <link href="/css/lightbox.css" rel="stylesheet"/>
 </head>
 <body>
@@ -26,10 +29,13 @@
                     <img alt="Planta - Logo" src="/images/planta-logo-full.png">
                 </a>
             </li>
-            <li class="nav-float"><a href="kontakt-z-nami.html" class="contact-btn nav-sizing">Kontakt</a>
-            </li>
+            <li class="nav-float"><a href="kontakt-z-nami.html" class="contact-btn nav-sizing">Kontakt</a></li>
             <li class="nav-float"><a href="o-nas.html" class="about-us-btn nav-sizing">O nas</a></li>
-            <li class="nav-float"><a href="./" class="main-site-btn nav-sizing">Strona główna</a>
+            <li class="nav-float"><a href="./" class="main-site-btn nav-sizing">Strona główna</a></li>
+            <li class="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </li>
         </ul>
     </nav>
@@ -39,59 +45,88 @@
         <img alt="git checko" src="/images/projektowanie/designing-main.jpg">
     </div>
     <div class="text-element sub-site-text">
-
     </div>
-    <div class="carousele-element sub-site-carousele carousel-container">
-        <div class="inner-carousel">
-            <div class="track">
-                <div class="card-container">
-                    <div class="card card1"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card2"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card3"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card4"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card5"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card6"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card7"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card8"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card9"></div>
-                </div>
-                <div class="card-container">
-                    <div class="card card10">1</div>
-                </div>
-                <div class="card-container">
-                    <div class="card card11">1</div>
-                </div>
-                <div class="card-container">
-                    <div class="card card12">12</div>
-                </div>
-            </div>
-            <div class="carousele-nav">
-                <button class="prev"><img src="images/fonts/caret-left-solid.svg"></button>
-                <button class="next"><img src="images/fonts/caret-right-solid.svg"></button>
-            </div>
+    <div class="owl-carousel owl-theme owl-loaded owl-drag owl-dots carousele-element">
+        <div>
+            <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+               data-type="image">
+                <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+            </a>
         </div>
-<!--        <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1" data-type="image">-->
-<!--            <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>-->
-<!--        </a>-->
+        <div>
+            <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+               data-type="image">
+                <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+               data-type="image">
+                <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+               data-type="image">
+                <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+               data-type="image">
+                <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+               data-type="image">
+                <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+               data-type="image">
+                <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+               data-type="image">
+                <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+            </a>
+        </div>
     </div>
 </section>
-<script src="js/carousele.js"></script>
-<script src="/js/lightbox-plus-jquery.js"></script>
+<script src="/js/lightbox-plus-jquery.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel(
+            {
+                loop: false,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    350: {
+                        items:2
+                    },
+                    550: {
+                        items: 3
+                    },
+                    900: {
+                        items: 4
+                    },
+                    1024: {
+                        items: 5
+                    }
+                }
+            }
+        );
+    });
+</script>
+
 </body>
 </html>

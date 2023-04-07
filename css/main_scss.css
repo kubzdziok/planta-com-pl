@@ -16,6 +16,7 @@ nav {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: white;
+  padding: 0 10px;
 }
 nav .nav-float {
   display: inline-block;
@@ -39,12 +40,40 @@ nav ul {
 nav ul a:visited {
   text-decoration: none;
 }
+nav ul .hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+nav ul .hamburger-menu .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #2C5545;
+}
+@media (max-width: 767px) {
+  nav ul .hamburger-menu {
+    display: inline-block;
+    float: right;
+  }
+  nav ul .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  nav ul .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  nav ul .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
 nav ul li {
   text-transform: uppercase;
 }
 nav ul li .nav-sizing {
   float: right;
-  width: 236px;
+  width: 232px;
   text-align: center;
   background-color: #2C5545;
   border-radius: 1px;
@@ -53,16 +82,45 @@ nav ul li .nav-sizing {
   transition: 0.4s ease-in;
   border: 2px solid #2C5545;
 }
-nav ul li .nav-sizing:hover {
-  cursor: pointer;
-  font-weight: 700;
-  background-color: #fff;
-  color: #2C5545;
+@media (max-width: 767px) {
+  nav ul li .nav-sizing {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  nav ul li .nav-sizing {
+    width: 170px;
+  }
+}
+@media (min-width: 1024px) {
+  nav ul li .nav-sizing:hover {
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #fff;
+    color: #2C5545;
+  }
 }
 nav ul li .contact-btn {
   margin-right: 0;
 }
 
+@media (max-width: 767px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    background-color: white;
+  }
+  nav .hamburger-menu {
+    padding: 0 10px;
+  }
+  nav ul {
+    margin: 10px 0 10px 0;
+  }
+  .site-selector {
+    padding-top: 52px;
+  }
+}
 .site-selector {
   width: 100%;
   height: 700px;
@@ -77,11 +135,9 @@ nav ul li .contact-btn {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 5px;
-  color: white;
   font-family: "Lato", sans-serif;
-  font-size: 24px;
   text-transform: uppercase;
-  justify-items: stretch;
+  padding: 0 10px;
 }
 .site-selector .main-container .grid-els {
   overflow: hidden;
@@ -90,36 +146,39 @@ nav ul li .contact-btn {
 }
 .site-selector .main-container .grid-els a {
   position: relative;
-  display: inline-block;
+  display: block;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   padding: 15px 20px;
   transition: all 0.4s ease-in;
   z-index: 100;
   letter-spacing: 2px;
   font-size: 19px;
+  width: fit-content;
 }
-.site-selector .main-container .grid-els a:hover {
-  background-color: #2C5545;
-  border-radius: 1px;
-  transition: all 0.4s ease-in;
+@media (min-width: 767px) and (max-width: 1023px) {
+  .site-selector .main-container .grid-els .realizations, .site-selector .main-container .grid-els .care {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
 }
-.site-selector .main-container .grid-els a:hover ~ .mask-div {
-  transition: all 0.4s ease-out;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
-}
-.site-selector .main-container .grid-els a:hover ~ .mask-div-br {
-  transition: all 0.4s ease-out;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+@media (min-width: 1024px) {
+  .site-selector .main-container .grid-els a:hover {
+    background-color: #2C5545;
+    border-radius: 1px;
+    transition: all 0.4s ease-in;
+  }
+  .site-selector .main-container .grid-els a:hover ~ .mask-div {
+    transition: all 0.4s ease-out;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+  }
 }
 .site-selector .main-container .grid-els .mask-div {
   transition: all 0.4s ease-in;
   position: relative;
   transform: translate(0, -30%);
-  height: 200%;
+  height: 250%;
   width: 100%;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
@@ -177,6 +236,7 @@ nav ul li .contact-btn {
 #designing-main {
   max-width: 1200px;
   margin: auto;
+  padding: 0 10px;
 }
 #designing-main .sub-site-image, #designing-main .sub-site-text {
   float: left;
@@ -194,111 +254,20 @@ nav ul li .contact-btn {
   width: 100%;
   object-fit: cover;
 }
-#designing-main .carousel-container {
-  overflow: hidden;
-  position: relative;
-  width: 1200px;
-  margin: auto;
-}
-#designing-main .carousel-container .inner-carousel {
-  width: 90%;
-  height: 220px;
-  margin: auto;
+#designing-main .carousele-element {
   overflow: hidden;
 }
-#designing-main .carousel-container .inner-carousel .track {
-  display: inline-flex;
-  height: 100%;
-  transition: transform 0.2s ease-in-out;
+#designing-main .carousele-element .owl-stage-outer .owl-stage {
+  margin: auto;
 }
-#designing-main .carousel-container .inner-carousel .track .card-container {
-  width: 220px;
-  height: 220px;
-  flex-shrink: 0;
-  padding-right: 20px;
+#designing-main .carousele-element .owl-stage-outer .owl-stage .owl-item a img {
+  height: 200px;
 }
-#designing-main .carousel-container .inner-carousel .track .card-container .card {
-  width: 100%;
-  height: 100%;
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 1px;
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card1 {
-  background-image: url("https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card2 {
-  background-image: url("https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card3 {
-  background-image: url("https://cdn.pixabay.com/photo/2016/08/11/23/48/italy-1587287_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card4 {
-  background-image: url("https://cdn.pixabay.com/photo/2014/08/29/03/02/horse-430441_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card5 {
-  background-image: url("https://cdn.pixabay.com/photo/2014/12/08/17/52/mare-561221_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card6 {
-  background-image: url("https://cdn.pixabay.com/photo/2017/02/08/17/24/butterfly-2049567_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card7 {
-  background-image: url("https://cdn.pixabay.com/photo/2017/11/30/22/00/pumpkin-2989569_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card8 {
-  background-image: url("https://cdn.pixabay.com/photo/2016/07/24/22/25/woman-1539416_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card9 {
-  background-image: url("https://cdn.pixabay.com/photo/2017/11/15/09/28/music-player-2951399_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card10 {
-  background-image: url("https://cdn.pixabay.com/photo/2018/02/23/04/38/laptop-3174729_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card11 {
-  background-image: url("https://cdn.pixabay.com/photo/2016/03/09/09/30/woman-1245817_960_720.jpg");
-}
-#designing-main .carousel-container .inner-carousel .track .card-container .card12 {
-  background-image: url("https://cdn.pixabay.com/photo/2016/11/08/05/31/adorable-1807544_960_720.jpg");
-}
-@media (max-width: 768px) {
-  #designing-main .carousel-container .inner-carousel .track .card-container {
-    width: 184px;
-  }
-}
-#designing-main .carousel-container .inner-carousel .carousele-nav button {
-  position: absolute;
-  top: 50%;
-  transform: translatey(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-}
-#designing-main .carousel-container .inner-carousel .carousele-nav .prev {
-  display: none;
-  left: 0;
-}
-#designing-main .carousel-container .inner-carousel .carousele-nav .prev img {
-  height: 100%;
-}
-#designing-main .carousel-container .inner-carousel .carousele-nav .prev.show {
-  display: block;
-}
-#designing-main .carousel-container .inner-carousel .carousele-nav .next {
-  right: 0;
-}
-#designing-main .carousel-container .inner-carousel .carousele-nav .next img {
-  height: 100%;
-}
-#designing-main .carousel-container .inner-carousel .carousele-nav .next.hide {
+#designing-main .carousele-element .owl-nav {
   display: none;
 }
-@media (max-width: 768px) {
-  #designing-main .carousel-container .carousel-container {
-    width: 95%;
-  }
+#designing-main .carousele-element .owl-dots {
+  margin-top: 10px;
 }
 
 .footer {

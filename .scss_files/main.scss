@@ -2,6 +2,11 @@ $lato-font: 'Lato', sans-serif;
 $primary-green: #2C5545;
 $advent-font: 'Advent Pro', sans-serif;
 $carousele-image-size: 220px;
+$media-min-desktop: 1024px;
+$media-max-tablet: 1023px;
+$media-min-tablet: 768px;
+$media-max-mobile: 767px;
+$media-max-grid: 880px;
 
 * {
   margin: 0;
@@ -22,6 +27,7 @@ nav {
   font-family: $lato-font;
   font-weight: 400;
   color: white;
+  padding: 0 10px;
 
   .nav-float {
     display: inline-block;
@@ -49,12 +55,45 @@ nav {
       text-decoration: none;
     }
 
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+
+      .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: $primary-green ;
+      }
+    }
+
+    @media (max-width: $media-max-mobile) {
+      .hamburger-menu {
+        display: inline-block;
+        float: right;
+      }
+
+      .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+      }
+
+    }
+
     li {
       text-transform: uppercase;
 
       .nav-sizing {
         float: right;
-        width: 236px;
+        width: 232px;
         text-align: center;
         background-color: $primary-green;
         border-radius: 1px;
@@ -64,17 +103,53 @@ nav {
         border: 2px solid $primary-green;
       }
 
-      .nav-sizing:hover {
-        cursor: pointer;
-        font-weight: 700;
-        background-color: #fff;
-        color: $primary-green;
+      @media (max-width: $media-max-mobile) {
+        .nav-sizing  {
+          display: none;
+        }
+
       }
+
+      @media (max-width: $media-max-tablet) {
+        .nav-sizing  {
+          width: 170px;
+        }
+      }
+      @media (min-width: $media-min-desktop) {
+        .nav-sizing:hover {
+          cursor: pointer;
+          font-weight: 700;
+          background-color: #fff;
+          color: $primary-green;
+        }
+      }
+
 
       .contact-btn {
         margin-right: 0;
       }
     }
+  }
+}
+
+@media (max-width: $media-max-mobile) {
+  nav {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    background-color: white;
+
+    .hamburger-menu {
+      padding: 0 10px;
+    }
+
+    ul {
+      margin: 10px 0 10px 0;
+    }
+  }
+
+  .site-selector {
+    padding-top: 52px ;
   }
 }
 
@@ -92,11 +167,9 @@ nav {
     grid-template-columns:repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 5px;
-    color: white;
     font-family: $lato-font;
-    font-size: 24px;
     text-transform: uppercase;
-    justify-items: stretch;
+    padding: 0 10px;
 
     .grid-els {
       overflow: hidden;
@@ -105,41 +178,43 @@ nav {
 
       a {
         position: relative;
-        display: inline-block;
+        display: block;
         text-align: center;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
         padding: 15px 20px;
         transition: all 0.4s ease-in;
         z-index: 100;
         letter-spacing: 2px;
         font-size: 19px;
+        width: fit-content;
       }
 
-      a:hover {
-        background-color: $primary-green;
-        border-radius: 1px;
-        transition: all 0.4s ease-in;
+      @media (min-width:$media-max-mobile) and (max-width: $media-max-tablet){
+        .realizations, .care {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+      @media (min-width: $media-min-desktop) {
+        a:hover {
+          background-color: $primary-green;
+          border-radius: 1px;
+          transition: all 0.4s ease-in;
+        }
+
+        a:hover ~ .mask-div {
+          transition: all 0.4s ease-out;
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+        }
       }
 
-      a:hover ~ .mask-div {
-        transition: all 0.4s ease-out;
-        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
-      }
-
-      a:hover ~ .mask-div-br {
-        transition: all 0.4s ease-out;
-        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
-
-      }
 
       .mask-div {
         transition: all 0.4s ease-in;
         position: relative;
         transform: translate(0, -30%);
-        height: 200%;
+        height: 250%;
         width: 100%;
         box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
       }
@@ -207,6 +282,7 @@ nav {
 #designing-main {
   max-width: 1200px;
   margin: auto;
+  padding: 0 10px;
 
   .sub-site-image, .sub-site-text {
     float: left;
@@ -228,156 +304,32 @@ nav {
     }
   }
 
-  // hererererere
+  // OWL CAROUSELE
 
-  .carousel-container {
+  .carousele-element {
     overflow: hidden;
-    position: relative;
-    width: 1200px;
-    margin: auto;
 
-    .inner-carousel {
-      width: 90%;
-      height: $carousele-image-size;
-      margin: auto;
-      overflow: hidden;
-
-      .track {
-        display: inline-flex;
-        height: 100%;
-        transition: transform 0.2s ease-in-out;
-
-        .card-container {
-          width: $carousele-image-size;
-          height: $carousele-image-size;
-          flex-shrink: 0;
-          padding-right: 20px;
-
-          .card {
-            width: 100%;
-            height: 100%;
-            background-position: center bottom;
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 1px;
-          }
-
-          .card1 {
-            background-image: url("https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg");
-          }
-
-          .card2 {
-            background-image: url("https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg");
-          }
-
-          .card3 {
-            background-image: url("https://cdn.pixabay.com/photo/2016/08/11/23/48/italy-1587287_960_720.jpg");
-          }
-
-          .card4 {
-            background-image: url("https://cdn.pixabay.com/photo/2014/08/29/03/02/horse-430441_960_720.jpg");
-          }
-
-          .card5 {
-            background-image: url("https://cdn.pixabay.com/photo/2014/12/08/17/52/mare-561221_960_720.jpg");
-          }
-
-          .card6 {
-            background-image: url("https://cdn.pixabay.com/photo/2017/02/08/17/24/butterfly-2049567_960_720.jpg");
-          }
-
-          .card7 {
-            background-image: url("https://cdn.pixabay.com/photo/2017/11/30/22/00/pumpkin-2989569_960_720.jpg");
-          }
-
-          .card8 {
-            background-image: url("https://cdn.pixabay.com/photo/2016/07/24/22/25/woman-1539416_960_720.jpg");
-          }
-
-          .card9 {
-            background-image: url("https://cdn.pixabay.com/photo/2017/11/15/09/28/music-player-2951399_960_720.jpg");
-          }
-
-          .card10 {
-            background-image: url("https://cdn.pixabay.com/photo/2018/02/23/04/38/laptop-3174729_960_720.jpg");
-          }
-
-          .card11 {
-            background-image: url("https://cdn.pixabay.com/photo/2016/03/09/09/30/woman-1245817_960_720.jpg");
-          }
-
-          .card12 {
-            background-image: url("https://cdn.pixabay.com/photo/2016/11/08/05/31/adorable-1807544_960_720.jpg");
-          }
-        }
-
-        @media (max-width: 768px) {
-          .card-container {
-            width: 184px;
-          }
-        }
-      }
-
-      .carousele-nav button {
-        position: absolute;
-        top: 50%;
-        transform: translatey(-50%);
-        width: 50px;
-        height: 50px;
-        background-color: #fff;
-        border: none;
-        cursor: pointer;
-      }
-
-      .carousele-nav .prev {
-        display: none;
-        left: 0;
-
-        img {
-          height: 100%;
-        }
-      }
-
-      .carousele-nav .prev.show {
-        display: block;
-      }
-
-      .carousele-nav .next {
-        right: 0;
-
-        img {
-          height: 100%;
-        }
-      }
-
-      .carousele-nav .next.hide {
-        display: none;
-      }
+    .owl-stage-outer {
+       .owl-stage {
+         margin: auto;
+         .owl-item {
+           a {
+             img {
+               height: 200px
+             }
+           }
+         }
+       }
     }
 
-    @media (max-width: 768px) {
-      .carousel-container {
-        width: 95%;
-      }
+    .owl-nav {
+      display: none;
     }
 
-
+    .owl-dots {
+      margin-top: 10px;
+    }
   }
-
-
-  // fsfdsdfd
-  //.sub-site-carousele {
-  //  overflow: hidden;
-  //  width: 100%;
-  //  height: 230px;
-  //
-  //  a {
-  //    img {
-  //      height: 100%;
-  //      width: 100%;
-  //    }
-  //  }
-  //}
 }
 
 .footer {

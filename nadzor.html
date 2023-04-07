@@ -25,5 +25,55 @@
         </ul>
     </nav>
 </header>
+<section class="supervision sub-site-section">
+    <div class="owl-carousel">
+        <div class="owl-stage-outer">
+            <div class="owl-stage">
+                <div class="owl-item">
+                    <a class="owl-item" href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+                       data-type="image">
+                        <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+                    </a>
+                </div>
+                <div class="owl-item">
+                    <a class="owl-item" href="/images/projektowanie/designing-main.jpg" data-lightbox="testimage-1"
+                       data-type="image">
+                        <img alt="dad" src="/images/projektowanie/designing-main.jpg"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="owl-dots">
+            <div class="owl-dot active"><span></span></div>
+            <div class="owl-dot"><span></span></div>
+            <div class="owl-dot"><span></span></div>
+        </div>
+    </div>
+</section>
+<script src="/js/lightbox-plus-jquery.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel(
+            {
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 3
+                    },
+                    1024: {
+                        items: 5
+                    }
+                }
+            }
+        );
+    });
+</script>
 </body>
 </html>
