@@ -18,12 +18,53 @@
 <body>
 <header>
   <nav class="navigation">
-    <ul>
-      <li class="nav-item"><a href="" class="contact-btn nav-sizing">Kontakt</a></li>
-      <li class="nav-item"><a href="" class="about-us-btn nav-sizing">O nas</a></li>
-      <li class="nav-item"><a href="/index.html" class="main-site-btn nav-sizing">Strona główna</a></li>
+    <div class="nav-float-logo nav-logo">
+      <a href="index.html">
+        <img alt="Planta - Logo" src="/images/planta-logo-full.png">
+      </a>
+    </div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="" class="contact-btn nav-sizing nohover">Kontakt</a></li>
+      <li class="nav-item"><a href="" class="about-us-btn nav-sizing nohover">O nas</a></li>
+      <li class="nav-item"><a href="./" class="main-site-btn nav-sizing nohover">Strona główna</a></li>
     </ul>
+    <div class="hamburger-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
   </nav>
 </header>
+<script src="/js/main.js"></script>
+<script src="/js/lightbox-plus-jquery.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel(
+            {
+              loop: false,
+              margin: 10,
+              nav: true,
+              responsive: {
+                0: {
+                  items: 1
+                },
+                350: {
+                  items:2
+                },
+                550: {
+                  items: 3
+                },
+                900: {
+                  items: 4
+                },
+                1024: {
+                  items: 5
+                }
+              }
+            }
+    );
+  });
+</script>
 </body>
 </html>

@@ -25,7 +25,7 @@ nav .nav-item {
 nav .nav-float-logo {
   display: inline-block;
   width: 150px;
-  margin-bottom: 30px;
+  margin: 5px 0 6px 0;
 }
 nav .nav-float-logo img {
   width: 100%;
@@ -223,6 +223,26 @@ nav .hamburger-menu .bar {
   margin-top: 10px;
 }
 
+.sub-site-desc-container {
+  width: 90%;
+  margin: auto;
+}
+.sub-site-desc-container .sub-site-header-1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #2C5545;
+}
+.sub-site-desc-container .sub-site-header-2 {
+  margin-bottom: 20px;
+}
+.sub-site-desc-container ul li::before {
+  background-image: url(/images/fonts/caret-left-solid.svg);
+}
+.sub-site-desc-container ul li {
+  list-style: none;
+  background-size: 20px;
+}
+
 .footer {
   max-width: 1200px;
   margin: auto;
@@ -239,7 +259,10 @@ nav .hamburger-menu .bar {
 }
 
 @media (max-width: 767px) {
-  nav .nav-menu {
+  header {
+    margin-bottom: 15px;
+  }
+  header nav .nav-menu {
     position: fixed;
     right: -100%;
     top: 58px;
@@ -252,24 +275,24 @@ nav .hamburger-menu .bar {
     transition: 0.3s;
     text-align: center;
   }
-  nav .nav-menu .nav-item {
+  header nav .nav-menu .nav-item {
     overflow: hidden;
     float: none;
   }
-  nav .nav-menu .nav-item .nav-sizing {
+  header nav .nav-menu .nav-item .nav-sizing {
     padding: 20px 0;
     margin: 0 20px;
     width: 150px;
   }
-  nav .nav-menu .contact-btn, nav .nav-menu .about-us-btn {
+  header nav .nav-menu .contact-btn, header nav .nav-menu .about-us-btn {
     border-bottom: solid 1px #FFFFFF;
   }
-  nav .nav-menu.active {
+  header nav .nav-menu.active {
     padding: 0 15px;
     margin: 10px 10px 0 0;
     right: 0;
   }
-  nav .hamburger-menu {
+  header nav .hamburger-menu {
     position: fixed;
     display: block;
     right: 0;
@@ -278,13 +301,13 @@ nav .hamburger-menu .bar {
     background-color: #2C5545;
     z-index: 20;
   }
-  nav .hamburger-menu.active .bar:nth-child(2) {
+  header nav .hamburger-menu.active .bar:nth-child(2) {
     opacity: 0;
   }
-  nav .hamburger-menu.active .bar:nth-child(1) {
+  header nav .hamburger-menu.active .bar:nth-child(1) {
     transform: translateY(11px) rotate(45deg);
   }
-  nav .hamburger-menu.active .bar:nth-child(3) {
+  header nav .hamburger-menu.active .bar:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
   }
   .site-selector {
@@ -323,7 +346,7 @@ nav .hamburger-menu .bar {
     grid-row: 7/8;
   }
 }
-@media (min-width: 550px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
   .site-selector .main-container .grid-els .realizations, .site-selector .main-container .grid-els .care {
     transform: translate(-50%, -50%) rotate(90deg);
   }

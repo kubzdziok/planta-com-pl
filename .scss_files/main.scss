@@ -37,7 +37,7 @@ nav {
   .nav-float-logo {
     display: inline-block;
     width: 150px;
-    margin-bottom: 30px;
+    margin: 5px 0 6px 0;
 
     img {
       width: 100%;
@@ -278,6 +278,34 @@ nav {
   //END OF OWL CAROUSLE
 }
 
+// SUB-SITES CSS
+
+.sub-site-desc-container {
+  width: 90%;
+  margin: auto;
+
+  .sub-site-header-1 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: $primary-green;
+  }
+
+  .sub-site-header-2 {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    li::before {
+      background-image: url(/images/fonts/caret-left-solid.svg);
+    }
+    li {
+      list-style: none;
+      background-size: 20px;
+    }
+
+  }
+}
+
 .footer {
   max-width: 1200px;
   margin: auto;
@@ -298,62 +326,66 @@ nav {
 @media (max-width: $media-max-mobile) {
 
   // NAVIGATION
-  nav {
-    .nav-menu {
-      position: fixed;
-      right: -100%;
-      top: 58px;
-      gap: 0;
-      flex-direction: column;
-      background-color: $primary-green;
-      width: fit-content;
-      margin: 0;
-      z-index: 20;
-      transition: 0.3s;
-      text-align: center;
+  header {
+    margin-bottom: 15px;
 
-      .nav-item {
-        overflow: hidden;
-        float: none;
+    nav {
+      .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 58px;
+        gap: 0;
+        flex-direction: column;
+        background-color: $primary-green;
+        width: fit-content;
+        margin: 0;
+        z-index: 20;
+        transition: 0.3s;
+        text-align: center;
 
-        .nav-sizing {
-          padding: 20px 0;
-          margin: 0 20px;
-          width: 150px;
+        .nav-item {
+          overflow: hidden;
+          float: none;
+
+          .nav-sizing {
+            padding: 20px 0;
+            margin: 0 20px;
+            width: 150px;
+          }
+        }
+
+        .contact-btn, .about-us-btn {
+          border-bottom: solid 1px #FFFFFF;
         }
       }
 
-      .contact-btn, .about-us-btn {
-        border-bottom: solid 1px #FFFFFF;
+      .nav-menu.active {
+        padding: 0 15px;
+        margin: 10px 10px 0 0;
+        right: 0;
       }
-    }
 
-    .nav-menu.active {
-      padding: 0 15px;
-      margin: 10px 10px 0 0;
-      right: 0;
-    }
+      .hamburger-menu {
+        position: fixed;
+        display: block;
+        right: 0;
+        padding: 8px 13px;
+        margin: 5px 10px;
+        background-color: $primary-green;
+        z-index: 20;
+      }
 
-    .hamburger-menu {
-      position: fixed;
-      display: block;
-      right: 0;
-      padding: 8px 13px;
-      margin: 5px 10px;
-      background-color: $primary-green;
-      z-index: 20;
-    }
+      .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+      }
 
-    .hamburger-menu.active .bar:nth-child(2) {
-      opacity: 0;
-    }
+      .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+      }
 
-    .hamburger-menu.active .bar:nth-child(1) {
-      transform: translateY(11px) rotate(45deg);
-    }
-
-    .hamburger-menu.active .bar:nth-child(3) {
-      transform: translateY(-10px) rotate(-45deg)
+      .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg)
+      }
     }
   }
 
@@ -406,7 +438,7 @@ nav {
 }
 
 // TABLET VIEW
-@media (min-width: 550px) and (max-width: $media-max-tablet) {
+@media (min-width: $media-max-mobile) and (max-width: $media-max-tablet) {
   .site-selector {
     .main-container {
       .grid-els {
