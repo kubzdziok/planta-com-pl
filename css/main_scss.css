@@ -332,9 +332,6 @@ nav .hamburger-menu .bar {
   header nav .hamburger-menu.active .bar:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
   }
-  .site-selector {
-    padding-top: 68px;
-  }
   .site-selector .main-container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
