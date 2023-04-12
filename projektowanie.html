@@ -40,8 +40,9 @@
     </nav>
 </header>
 <section id="designing-main" class="sub-site-section">
+    <div class="loader"></div>
     <div class="image-element sub-site-image">
-        <img alt="git checko" src="/images/subsites/projektowanie/designing-main.jpg">
+        <img alt="site main image" src="/images/subsites/projektowanie/designing-main.jpg">
     </div>
     <div class="text-element sub-site-text">
         <div class="sub-site-desc-container">
@@ -153,6 +154,10 @@
         );
     });
 </script>
-
+<script>
+    $(window).on('load', function () {
+        $(".loader").hide();
+    });
+</script>
 </body>
 </html>
