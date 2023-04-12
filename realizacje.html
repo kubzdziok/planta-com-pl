@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Planta - zieleń i ogrody | Projektowanie, wykonanie, pielęgnacja zieleni i ogródów</title>
-    <meta name="description" content="projektowanie, wykonanie, nadzór, pielęgnacja i pomoc w sprawach urzedowych oraz ich w ich prowadzeniu">
+    <meta name="description"
+          content="projektowanie, wykonanie, nadzór, pielęgnacja i pomoc w sprawach urzedowych oraz ich w ich prowadzeniu">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="">
     <meta property="og:type" content="">
@@ -12,8 +13,13 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,300;1,500;1,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main_scss.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,300;1,500;1,600&family=Lato:wght@400;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/css/main_scss.css">
+    <link rel="stylesheet" href="/css/owl-carousele/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl-carousele/owl.theme.default.min.css">
+    <link href="/css/lightbox.css" rel="stylesheet"/>
 </head>
 <body>
 <header>
@@ -35,6 +41,71 @@
         </div>
     </nav>
 </header>
+<section id="realizations-main" class="sub-site-section">
+    <div class="image-element sub-site-image">
+        <img alt="git checko" src="/images/subsites/realizacje/realizations-main.jpg">
+    </div>
+    <div class="text-element sub-site-text">
+        <div class="sub-site-desc-container">
+            <h1 class="sub-site-header-1">realizacja</h1>
+            <h2 class="sub-site-header-2">Realizujemy:</h2>
+            <div class="sub-site-list">
+                <div class="sub-list-bullet-div"><img alt="bullet" src="images/fonts/caret-right.svg"></div>
+                <div class="sub-list-text-div">
+                    <p>
+                        Ogrody przydomowe
+                    </p>
+                </div>
+            </div>
+            <div class="sub-site-list">
+                <div class="sub-list-bullet-div"><img alt="bullet" src="images/fonts/caret-right.svg"></div>
+                <div class="sub-list-text-div">
+                    <p>
+                        Tereny zieleni przy osiedlach mieszkaniowych, biurowcach, przezstrzeniach publicznych
+                    </p>
+                </div>
+            </div>
+            <div class="sub-site-list">
+                <div class="sub-list-bullet-div"><img alt="bullet" src="images/fonts/caret-right.svg"></div>
+                <div class="sub-list-text-div">
+                    <p>
+                        Zielone dachy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="owl-carousel owl-theme owl-loaded owl-drag owl-dots carousele-element">
+        <div>
+            <a href="/images/subsites/realizacje/realizacja1.jpg" data-lightbox="realizations-gallery"
+               data-type="image">
+                <img alt="realizacje-strona" src="/images/subsites/realizacje/realizacja1.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/subsites/realizacje/realizacja2.jpg" data-lightbox="realizations-gallery"
+               data-type="image">
+                <img alt="realizacje-strona" src="/images/subsites/realizacje/realizacja2.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/subsites/realizacje/realizacja3.jpg" data-lightbox="realizations-gallery"
+               data-type="image">
+                <img alt="realizacje-strona" src="/images/subsites/realizacje/realizacja3.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="/images/subsites/realizacje/realizacja4.jpg" data-lightbox="realizations-gallery"
+               data-type="image">
+                <img alt="realizacje-strona" src="/images/subsites/realizacje/realizacja4.jpg"/>
+            </a>
+        </div>
+        <a href="/images/subsites/realizacje/realizacja5.jpg" data-lightbox="realizations-gallery"
+           data-type="image">
+            <img alt="realizacje-strona" src="/images/subsites/realizacje/realizacja5.jpg"/>
+        </a>
+    </div>
+</section>
 <script src="/js/main.js"></script>
 <script src="/js/lightbox-plus-jquery.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
@@ -50,7 +121,7 @@
                         items: 1
                     },
                     350: {
-                        items:2
+                        items: 2
                     },
                     550: {
                         items: 3

@@ -199,11 +199,18 @@ nav .hamburger-menu .bar {
 .sub-site-section .sub-site-text {
   width: 60%;
 }
+.sub-site-section .sub-site-text .sub-site-desc-container .arrangements-h2 {
+  display: none;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .care-bullet-div, .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .arrangements-bullet-div {
+  display: none;
+}
 .sub-site-section .sub-site-image {
   width: 40%;
 }
 .sub-site-section .sub-site-image img {
-  max-height: 450px;
+  height: 500px;
+  max-height: 550px;
   width: 100%;
   object-fit: cover;
 }
@@ -215,6 +222,7 @@ nav .hamburger-menu .bar {
 }
 .sub-site-section .carousele-element .owl-stage-outer .owl-stage .owl-item a img {
   height: 200px;
+  object-fit: cover;
 }
 .sub-site-section .carousele-element .owl-nav {
   display: none;
@@ -223,11 +231,17 @@ nav .hamburger-menu .bar {
   margin-top: 10px;
 }
 
-.sub-site-desc-container {
+.sub-site-section .supervision-bcg-img {
+  background-image: url("/images/subsites/nadzor/stamp-not.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+.sub-site-section .sub-site-desc-container {
   width: 90%;
   margin: auto;
 }
-.sub-site-desc-container .sub-site-header-1 {
+.sub-site-section .sub-site-desc-container .sub-site-header-1 {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: #2C5545;
@@ -236,25 +250,25 @@ nav .hamburger-menu .bar {
   font-size: 42px;
   font-weight: 600;
 }
-.sub-site-desc-container .sub-site-header-2 {
+.sub-site-section .sub-site-desc-container .sub-site-header-2 {
   margin-bottom: 40px;
   font-family: "Lato", sans-serif;
   font-size: 32px;
   font-weight: 700;
 }
-.sub-site-desc-container .sub-site-list {
+.sub-site-section .sub-site-desc-container .sub-site-list {
   vertical-align: baseline;
   padding-bottom: 20px;
 }
-.sub-site-desc-container .sub-site-list .sub-list-bullet-div {
+.sub-site-section .sub-site-desc-container .sub-site-list .sub-list-bullet-div {
   display: inline-block;
   vertical-align: middle;
   width: 25px;
 }
-.sub-site-desc-container .sub-site-list .sub-list-bullet-div img {
+.sub-site-section .sub-site-desc-container .sub-site-list .sub-list-bullet-div img {
   height: 30px;
 }
-.sub-site-desc-container .sub-site-list .sub-list-text-div {
+.sub-site-section .sub-site-desc-container .sub-site-list .sub-list-text-div {
   letter-spacing: 1px;
   font-style: italic;
   font-family: "Advent Pro", sans-serif;
@@ -377,8 +391,11 @@ nav .hamburger-menu .bar {
   .sub-site-section .sub-site-text {
     width: 100%;
   }
-  .sub-site-section .sub-site-text .sub-site-header-1 {
+  .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-header-1 {
     text-align: center;
+  }
+  .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-text-div {
+    width: 100%;
   }
 }
 @media (min-width: 767px) and (max-width: 1023px) {

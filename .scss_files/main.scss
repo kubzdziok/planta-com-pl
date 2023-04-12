@@ -224,7 +224,7 @@ nav {
   }
 }
 
- .sub-site-section{
+.sub-site-section {
   max-width: 1200px;
   margin: auto;
   padding: 0 10px;
@@ -236,13 +236,25 @@ nav {
 
   .sub-site-text {
     width: 60%;
+
+    .sub-site-desc-container {
+      .arrangements-h2 {
+        display: none;
+      }
+      .sub-site-list {
+        .care-bullet-div, .arrangements-bullet-div {
+          display: none;
+        }
+      }
+    }
   }
 
   .sub-site-image {
     width: 40%;
 
     img {
-      max-height: 450px;
+      height: 500px;
+      max-height: 550px;
       width: 100%;
       object-fit: cover;
     }
@@ -259,7 +271,8 @@ nav {
         .owl-item {
           a {
             img {
-              height: 200px
+              height: 200px;
+              object-fit: cover;
             }
           }
         }
@@ -280,50 +293,59 @@ nav {
 
 // SUB-SITES CSS
 
-.sub-site-desc-container {
-  width: 90%;
-  margin: auto;
-
-  .sub-site-header-1 {
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: $primary-green;
-    font-family: $advent-font;
-    font-style: italic;
-    font-size: 42px;
-    font-weight: 600;
+.sub-site-section {
+  .supervision-bcg-img {
+    background-image: url("/images/subsites/nadzor/stamp-not.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
   }
 
-  .sub-site-header-2 {
-    margin-bottom: 40px;
-    font-family: $lato-font;
-    font-size: 32px;
-    font-weight: 700;
-  }
+  .sub-site-desc-container {
+    width: 90%;
+    margin: auto;
 
-  .sub-site-list {
-    vertical-align: baseline;
-    padding-bottom: 20px;
-
-    .sub-list-bullet-div {
-      display: inline-block;
-      vertical-align: middle;
-      width: 25px;
-
-      img {
-        height: 30px;
-      }
+    .sub-site-header-1 {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: $primary-green;
+      font-family: $advent-font;
+      font-style: italic;
+      font-size: 42px;
+      font-weight: 600;
     }
 
-    .sub-list-text-div {
-      letter-spacing: 1px;
-      font-style: italic;
-      font-family: $advent-font;
-      font-weight: 300;
-      font-size: 18px;
-      display: inline-block;
-      width: 70%;
-      vertical-align: top;
+    .sub-site-header-2 {
+      margin-bottom: 40px;
+      font-family: $lato-font;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .sub-site-list {
+      vertical-align: baseline;
+      padding-bottom: 20px;
+
+      .sub-list-bullet-div {
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+
+        img {
+          height: 30px;
+        }
+      }
+
+      .sub-list-text-div {
+        letter-spacing: 1px;
+        font-style: italic;
+        font-family: $advent-font;
+        font-weight: 300;
+        font-size: 18px;
+        display: inline-block;
+        width: 70%;
+        vertical-align: top;
+      }
     }
   }
 }
@@ -343,6 +365,7 @@ nav {
     color: #2C5545;
   }
 }
+
 
 // MOBILE VIEW
 @media (max-width: $media-max-mobile) {
@@ -464,6 +487,7 @@ nav {
       width: 100%;
       text-align: center;
       float: none;
+
       img {
         height: 150px;
         margin: auto;
@@ -473,9 +497,18 @@ nav {
     .sub-site-text {
       width: 100%;
 
-    .sub-site-header-1 {
-      text-align: center;
-    }
+      .sub-site-desc-container {
+
+        .sub-site-header-1 {
+          text-align: center;
+        }
+
+        .sub-site-list {
+          .sub-list-text-div {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 
