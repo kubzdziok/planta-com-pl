@@ -220,9 +220,18 @@ nav .hamburger-menu .bar {
 .sub-site-section .carousele-element .owl-stage-outer .owl-stage {
   margin: auto;
 }
+.sub-site-section .carousele-element .owl-stage-outer .owl-stage .owl-item {
+  overflow: hidden;
+}
 .sub-site-section .carousele-element .owl-stage-outer .owl-stage .owl-item a img {
   height: 200px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+@media (min-width: 1024px) {
+  .sub-site-section .carousele-element .owl-stage-outer .owl-stage .owl-item a:hover img {
+    transform: scale(1.05);
+  }
 }
 .sub-site-section .carousele-element .owl-nav {
   display: none;
