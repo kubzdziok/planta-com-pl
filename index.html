@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/main_scss.css">
 </head>
 <body>
+<div class="loader-wrapper"><div class="loader"></div></div>
 <header>
     <nav class="navigation">
         <div class="nav-float-logo nav-logo">
@@ -38,7 +39,6 @@
     </nav>
 </header>
 <section class="site-selector">
-    <div class="loader"></div>
     <div class="main-container">
         <div class="grid-el-1 grid-els">
             <a href="projektowanie.html" class="projects nohover"><p>projektowanie</p></a>
@@ -79,7 +79,7 @@
 <script src="/js/lightbox-plus-jquery.min.js"></script>
 <script>
     $(window).on('load', function () {
-        $(".loader").hide();
+        $(".loader-wrapper").hide();
     });
 </script>
 </body>

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/main_scss.css">
 </head>
 <body>
+<div class="loader-wrapper"><div class="loader"></div></div>
 <header>
     <nav class="navigation">
         <div class="nav-float-logo nav-logo">
@@ -37,7 +38,6 @@
     </nav>
 </header>
 <section id="care-main" class="sub-site-section">
-    <div class="loader"></div>
     <div class="image-element sub-site-image">
         <img alt="site main image" src="/images/subsites/pielegnacja/care-main.jpg">
     </div>
@@ -104,7 +104,7 @@
 </script>
 <script>
     $(window).on('load', function () {
-        $(".loader").hide();
+        $(".loader-wrapper").hide();
     });
 </script>
 </body>

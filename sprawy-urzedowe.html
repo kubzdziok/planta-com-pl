@@ -21,6 +21,7 @@
     <link href="/css/lightbox.css" rel="stylesheet"/>
 </head>
 <body>
+<div class="loader-wrapper"><div class="loader"></div></div>
 <header>
     <nav class="navigation">
         <div class="nav-float-logo nav-logo">
@@ -41,7 +42,6 @@
     </nav>
 </header>
 <section id="office-main" class="sub-site-section">
-    <div class="loader"></div>
     <div class="image-element sub-site-image">
         <img alt="site main image" src="/images/subsites/sprawy-urzedowe/office-main.jpg">
     </div>
@@ -116,7 +116,7 @@
 </script>
 <script>
     $(window).on('load', function () {
-        $(".loader").hide();
+        $(".loader-wrapper").hide();
     });
 </script>
 </body>
