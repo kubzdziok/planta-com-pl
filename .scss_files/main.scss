@@ -29,6 +29,7 @@ nav {
   color: white;
   padding: 0 10px;
   display: flex;
+  margin-bottom: 30px;
 
   .nav-item {
     float: right;
@@ -223,14 +224,13 @@ nav {
   }
 }
 
-#designing-main {
+ .sub-site-section{
   max-width: 1200px;
   margin: auto;
   padding: 0 10px;
 
   .sub-site-image, .sub-site-text {
     float: left;
-    height: 430px;
     margin-bottom: 30px;
   }
 
@@ -242,7 +242,7 @@ nav {
     width: 40%;
 
     img {
-      height: 100%;
+      max-height: 450px;
       width: 100%;
       object-fit: cover;
     }
@@ -288,21 +288,43 @@ nav {
     text-transform: uppercase;
     margin-bottom: 20px;
     color: $primary-green;
+    font-family: $advent-font;
+    font-style: italic;
+    font-size: 42px;
+    font-weight: 600;
   }
 
   .sub-site-header-2 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-family: $lato-font;
+    font-size: 32px;
+    font-weight: 700;
   }
 
-  ul {
-    li::before {
-      background-image: url(/images/fonts/caret-left-solid.svg);
-    }
-    li {
-      list-style: none;
-      background-size: 20px;
+  .sub-site-list {
+    vertical-align: baseline;
+    padding-bottom: 20px;
+
+    .sub-list-bullet-div {
+      display: inline-block;
+      vertical-align: middle;
+      width: 25px;
+
+      img {
+        height: 30px;
+      }
     }
 
+    .sub-list-text-div {
+      letter-spacing: 1px;
+      font-style: italic;
+      font-family: $advent-font;
+      font-weight: 300;
+      font-size: 18px;
+      display: inline-block;
+      width: 70%;
+      vertical-align: top;
+    }
   }
 }
 
@@ -435,6 +457,30 @@ nav {
     }
 
   }
+
+  // SUB SITES CSS
+
+  .sub-site-section {
+    .sub-site-image {
+      padding: 0 3% 0 3%;
+      width: 100%;
+      text-align: center;
+      float: none;
+      img {
+        height: 150px;
+        margin: auto;
+      }
+    }
+
+    .sub-site-text {
+      width: 100%;
+
+    .sub-site-header-1 {
+      text-align: center;
+    }
+    }
+  }
+
 }
 
 // TABLET VIEW

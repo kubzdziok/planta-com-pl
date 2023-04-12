@@ -18,6 +18,7 @@ nav {
   color: white;
   padding: 0 10px;
   display: flex;
+  margin-bottom: 30px;
 }
 nav .nav-item {
   float: right;
@@ -186,40 +187,39 @@ nav .hamburger-menu .bar {
   grid-row: 2/3;
 }
 
-#designing-main {
+.sub-site-section {
   max-width: 1200px;
   margin: auto;
   padding: 0 10px;
 }
-#designing-main .sub-site-image, #designing-main .sub-site-text {
+.sub-site-section .sub-site-image, .sub-site-section .sub-site-text {
   float: left;
-  height: 430px;
   margin-bottom: 30px;
 }
-#designing-main .sub-site-text {
+.sub-site-section .sub-site-text {
   width: 60%;
 }
-#designing-main .sub-site-image {
+.sub-site-section .sub-site-image {
   width: 40%;
 }
-#designing-main .sub-site-image img {
-  height: 100%;
+.sub-site-section .sub-site-image img {
+  max-height: 450px;
   width: 100%;
   object-fit: cover;
 }
-#designing-main .carousele-element {
+.sub-site-section .carousele-element {
   overflow: hidden;
 }
-#designing-main .carousele-element .owl-stage-outer .owl-stage {
+.sub-site-section .carousele-element .owl-stage-outer .owl-stage {
   margin: auto;
 }
-#designing-main .carousele-element .owl-stage-outer .owl-stage .owl-item a img {
+.sub-site-section .carousele-element .owl-stage-outer .owl-stage .owl-item a img {
   height: 200px;
 }
-#designing-main .carousele-element .owl-nav {
+.sub-site-section .carousele-element .owl-nav {
   display: none;
 }
-#designing-main .carousele-element .owl-dots {
+.sub-site-section .carousele-element .owl-dots {
   margin-top: 10px;
 }
 
@@ -231,16 +231,38 @@ nav .hamburger-menu .bar {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: #2C5545;
+  font-family: "Advent Pro", sans-serif;
+  font-style: italic;
+  font-size: 42px;
+  font-weight: 600;
 }
 .sub-site-desc-container .sub-site-header-2 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
 }
-.sub-site-desc-container ul li::before {
-  background-image: url(/images/fonts/caret-left-solid.svg);
+.sub-site-desc-container .sub-site-list {
+  vertical-align: baseline;
+  padding-bottom: 20px;
 }
-.sub-site-desc-container ul li {
-  list-style: none;
-  background-size: 20px;
+.sub-site-desc-container .sub-site-list .sub-list-bullet-div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+}
+.sub-site-desc-container .sub-site-list .sub-list-bullet-div img {
+  height: 30px;
+}
+.sub-site-desc-container .sub-site-list .sub-list-text-div {
+  letter-spacing: 1px;
+  font-style: italic;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
 }
 
 .footer {
@@ -344,6 +366,22 @@ nav .hamburger-menu .bar {
   .site-selector .main-container .grid-el-7 {
     grid-column: 1/2;
     grid-row: 7/8;
+  }
+  .sub-site-section .sub-site-image {
+    padding: 0 3% 0 3%;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+  .sub-site-section .sub-site-image img {
+    height: 150px;
+    margin: auto;
+  }
+  .sub-site-section .sub-site-text {
+    width: 100%;
+  }
+  .sub-site-section .sub-site-text .sub-site-header-1 {
+    text-align: center;
   }
 }
 @media (min-width: 767px) and (max-width: 1023px) {
