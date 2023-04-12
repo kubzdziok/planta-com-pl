@@ -224,10 +224,19 @@ nav {
   }
 }
 
+// SUB-SITES CSS
+
 .sub-site-section {
   max-width: 1200px;
   margin: auto;
   padding: 0 10px;
+
+  .supervision-bcg-img {
+    background-image: url("/images/subsites/nadzor/stamp-not.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
 
   .sub-site-image, .sub-site-text {
     float: left;
@@ -238,11 +247,62 @@ nav {
     width: 60%;
 
     .sub-site-desc-container {
-      .arrangements-h2 {
+      width: 90%;
+      margin: auto;
+
+      .sub-site-header-1 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: $primary-green;
+        font-family: $advent-font;
+        font-style: italic;
+        font-size: 42px;
+        font-weight: 600;
+      }
+
+      .sub-site-header-2 {
+        margin-bottom: 40px;
+        font-family: $lato-font;
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      .arrangements-h2, .about-us-h2 {
         display: none;
       }
       .sub-site-list {
-        .care-bullet-div, .arrangements-bullet-div {
+        vertical-align: baseline;
+        padding-bottom: 20px;
+
+        .sub-list-bullet-div {
+          display: inline-block;
+          vertical-align: middle;
+          width: 25px;
+
+          img {
+            height: 30px;
+          }
+        }
+
+        .sub-list-text-div {
+          letter-spacing: 1px;
+          font-family: $advent-font;
+          font-weight: 300;
+          font-size: 18px;
+          display: inline-block;
+          width: 85%;
+          vertical-align: top;
+        }
+
+        .about-us-text-div p:nth-child(1), .about-us-text-div p:nth-child(3) {
+          font-weight: 500;
+        }
+
+        .about-us-text-div p:nth-child(1),  .about-us-text-div p:nth-child(2){
+          padding-bottom: 15px;
+        }
+
+        .care-bullet-div, .arrangements-bullet-div, .about-us-bullet-div {
           display: none;
         }
       }
@@ -299,65 +359,6 @@ nav {
   }
 
   //END OF OWL CAROUSLE
-}
-
-// SUB-SITES CSS
-
-.sub-site-section {
-  .supervision-bcg-img {
-    background-image: url("/images/subsites/nadzor/stamp-not.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-  }
-
-  .sub-site-desc-container {
-    width: 90%;
-    margin: auto;
-
-    .sub-site-header-1 {
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      color: $primary-green;
-      font-family: $advent-font;
-      font-style: italic;
-      font-size: 42px;
-      font-weight: 600;
-    }
-
-    .sub-site-header-2 {
-      margin-bottom: 40px;
-      font-family: $lato-font;
-      font-size: 32px;
-      font-weight: 700;
-    }
-
-    .sub-site-list {
-      vertical-align: baseline;
-      padding-bottom: 20px;
-
-      .sub-list-bullet-div {
-        display: inline-block;
-        vertical-align: middle;
-        width: 25px;
-
-        img {
-          height: 30px;
-        }
-      }
-
-      .sub-list-text-div {
-        letter-spacing: 1px;
-        font-style: italic;
-        font-family: $advent-font;
-        font-weight: 300;
-        font-size: 18px;
-        display: inline-block;
-        width: 70%;
-        vertical-align: top;
-      }
-    }
-  }
 }
 
 .footer {
@@ -515,7 +516,7 @@ nav {
 
         .sub-site-list {
           .sub-list-text-div {
-            width: 100%;
+            width: 85%;
           }
         }
       }

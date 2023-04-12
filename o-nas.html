@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Planta - zieleń i ogrody | Projektowanie, wykonanie, pielęgnacja zieleni i ogródów</title>
-    <meta name="description" content="projektowanie, wykonanie, nadzór, pielęgnacja i pomoc w sprawach urzedowych oraz ich w ich prowadzeniu">
+    <meta name="description"
+          content="projektowanie, wykonanie, nadzór, pielęgnacja i pomoc w sprawach urzedowych oraz ich w ich prowadzeniu">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="">
     <meta property="og:type" content="">
@@ -12,8 +13,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,300;1,500;1,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main_scss.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main_scss.css">
+    <link rel="stylesheet" href="/css/owl-carousele/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl-carousele/owl.theme.default.min.css">
+    <link href="/css/lightbox.css" rel="stylesheet"/>
 </head>
 <body>
 <header>
@@ -35,6 +40,40 @@
         </div>
     </nav>
 </header>
+<section class="supervision sub-site-section">
+    <div class="image-element sub-site-image">
+        <img alt="git checko" src="/images/subsites/about-us/aboutus-main.jpg">
+    </div>
+    <div class="text-element sub-site-text">
+        <div class="sub-site-desc-container">
+            <h1 class="sub-site-header-1">o nas</h1>
+            <h2 class="sub-site-header-2 about-us-h2"></h2>
+            <div class="sub-site-list">
+                <div class="sub-list-bullet-div about-us-bullet-div"><img alt="bullet" src="images/fonts/caret-right.svg"></div>
+                <div class="sub-list-text-div about-us-text-div">
+                    <p>
+                        Jesteśmy młodym, prężnie rozwijającym się zespołem, którego pasją jest praca z zielenią i ciągłe
+                        podejmowanie wyzwań kreacji nowych przestrzeni.
+                    </p>
+                    <p>
+                        Staramy się tworzyć miejsca, które wypełnią
+                        twoją codzienną przestrzeń dawką naturalnej siły przyrody. Zieleń roślin pozytywnie wpływa na
+                        nasz nastrój, zapach pobudza zmysły, kolory zachwycają i przywołują miłe wspomnienia. W PLANCIE
+                        wiemy jak kreować niebanalne zielone przestrzenie, aby zachwycały i przyciągały nie tylko oko,
+                        ale również były zachętą do spędzenia chwili wytchnienia wśród zieleni. Skala nie jest dla nas
+                        ograniczeniem! Z takim samym zaangażowaniem podchodzimy do przestrzeni osiedli, placów
+                        miejskich, jak i do niewielkich ogródków przydomowych, a nawet tarasów i balkonów.
+                    </p>
+                    <p>
+                        Każde zadanie jest dla nas ważne, bo tworzymy twoją niepowtarzalną zieloną przestrzeń.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="owl-carousel owl-theme owl-loaded owl-drag owl-dots carousele-element">
+    </div>
+</section>
 <script src="/js/main.js"></script>
 <script src="/js/lightbox-plus-jquery.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
@@ -50,7 +89,7 @@
                         items: 1
                     },
                     350: {
-                        items:2
+                        items: 2
                     },
                     550: {
                         items: 3

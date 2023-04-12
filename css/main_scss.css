@@ -192,6 +192,12 @@ nav .hamburger-menu .bar {
   margin: auto;
   padding: 0 10px;
 }
+.sub-site-section .supervision-bcg-img {
+  background-image: url("/images/subsites/nadzor/stamp-not.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
 .sub-site-section .sub-site-image, .sub-site-section .sub-site-text {
   float: left;
   margin-bottom: 30px;
@@ -199,10 +205,56 @@ nav .hamburger-menu .bar {
 .sub-site-section .sub-site-text {
   width: 60%;
 }
-.sub-site-section .sub-site-text .sub-site-desc-container .arrangements-h2 {
+.sub-site-section .sub-site-text .sub-site-desc-container {
+  width: 90%;
+  margin: auto;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-header-1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #2C5545;
+  font-family: "Advent Pro", sans-serif;
+  font-style: italic;
+  font-size: 42px;
+  font-weight: 600;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-header-2 {
+  margin-bottom: 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .arrangements-h2, .sub-site-section .sub-site-text .sub-site-desc-container .about-us-h2 {
   display: none;
 }
-.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .care-bullet-div, .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .arrangements-bullet-div {
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list {
+  vertical-align: baseline;
+  padding-bottom: 20px;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-bullet-div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-bullet-div img {
+  height: 30px;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-text-div {
+  letter-spacing: 1px;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  display: inline-block;
+  width: 85%;
+  vertical-align: top;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .about-us-text-div p:nth-child(1), .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .about-us-text-div p:nth-child(3) {
+  font-weight: 500;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .about-us-text-div p:nth-child(1), .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .about-us-text-div p:nth-child(2) {
+  padding-bottom: 15px;
+}
+.sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .care-bullet-div, .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .arrangements-bullet-div, .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .about-us-bullet-div {
   display: none;
 }
 .sub-site-section .sub-site-image {
@@ -238,54 +290,6 @@ nav .hamburger-menu .bar {
 }
 .sub-site-section .carousele-element .owl-dots {
   margin-top: 10px;
-}
-
-.sub-site-section .supervision-bcg-img {
-  background-image: url("/images/subsites/nadzor/stamp-not.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-}
-.sub-site-section .sub-site-desc-container {
-  width: 90%;
-  margin: auto;
-}
-.sub-site-section .sub-site-desc-container .sub-site-header-1 {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #2C5545;
-  font-family: "Advent Pro", sans-serif;
-  font-style: italic;
-  font-size: 42px;
-  font-weight: 600;
-}
-.sub-site-section .sub-site-desc-container .sub-site-header-2 {
-  margin-bottom: 40px;
-  font-family: "Lato", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-}
-.sub-site-section .sub-site-desc-container .sub-site-list {
-  vertical-align: baseline;
-  padding-bottom: 20px;
-}
-.sub-site-section .sub-site-desc-container .sub-site-list .sub-list-bullet-div {
-  display: inline-block;
-  vertical-align: middle;
-  width: 25px;
-}
-.sub-site-section .sub-site-desc-container .sub-site-list .sub-list-bullet-div img {
-  height: 30px;
-}
-.sub-site-section .sub-site-desc-container .sub-site-list .sub-list-text-div {
-  letter-spacing: 1px;
-  font-style: italic;
-  font-family: "Advent Pro", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  display: inline-block;
-  width: 70%;
-  vertical-align: top;
 }
 
 .footer {
@@ -404,7 +408,7 @@ nav .hamburger-menu .bar {
     text-align: center;
   }
   .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-text-div {
-    width: 100%;
+    width: 85%;
   }
 }
 @media (min-width: 767px) and (max-width: 1023px) {
