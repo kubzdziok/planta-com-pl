@@ -160,54 +160,54 @@ body .loader {
   transition: all 0.4s ease-in;
   position: relative;
   transform: translate(0, -30%);
-  height: 400%;
+  height: 700%;
   width: 100%;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
 .main-container .grid-el-1 {
-  background-image: url("/images/glowna/planta-1.jpg");
+  background-image: url("/images/glowna/planta-1.webp");
   background-size: cover;
   background-position: center;
   grid-column: 1/3;
   grid-row: 1/2;
 }
 .main-container .grid-el-2 {
-  background-image: url("/images/glowna/planta-2.jpg");
+  background-image: url("/images/glowna/planta-2.webp");
   background-size: cover;
   background-position: center;
   grid-column: 3/5;
   grid-row: 1/2;
 }
 .main-container .grid-el-3 {
-  background-image: url("/images/glowna/planta-3.jpg");
+  background-image: url("/images/glowna/planta-3.webp");
   background-size: cover;
   background-position: center;
   grid-column: 5/6;
   grid-row: 1/3;
 }
 .main-container .grid-el-4 {
-  background-image: url("/images/glowna/planta-4.jpg");
+  background-image: url("/images/glowna/planta-4.webp");
   background-size: cover;
   background-position: center;
   grid-column: 1/2;
   grid-row: 2/4;
 }
 .main-container .grid-el-5 {
-  background-image: url("/images/glowna/planta-5.jpg");
+  background-image: url("/images/glowna/planta-5.webp");
   background-size: cover;
   background-position: center;
   grid-column: 2/4;
   grid-row: 3/4;
 }
 .main-container .grid-el-6 {
-  background-image: url("/images/glowna/planta-6.jpeg");
+  background-image: url("/images/glowna/planta-6.webp");
   background-size: cover;
   background-position: center;
   grid-column: 4/6;
   grid-row: 3/4;
 }
 .main-container .grid-el-7 {
-  background-image: url("/images/glowna/planta-logo-no-border.png");
+  background-image: url("/images/glowna/planta-logo-no-border.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -221,7 +221,7 @@ body .loader {
   padding: 0 10px;
 }
 .sub-site-section .supervision-bcg-img {
-  background-image: url("/images/subsites/nadzor/stampnot.png");
+  background-image: url("/images/subsites/nadzor/stampnot.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -242,7 +242,6 @@ body .loader {
   margin-bottom: 20px;
   color: #2C5545;
   font-family: "Advent Pro", sans-serif;
-  font-style: italic;
   font-size: 42px;
   font-weight: 600;
 }
@@ -318,6 +317,16 @@ body .loader {
 }
 .sub-site-section .carousele-element .owl-dots {
   margin-top: 10px;
+}
+.sub-site-section .carousele-element .owl-dots .owl-dot {
+  width: 48px;
+  height: 48px;
+}
+.sub-site-section .carousele-element .owl-dots .owl-dot span {
+  margin: auto;
+}
+.sub-site-section .carousele-element .owl-dots .owl-dot.active span {
+  background-color: #2C5545;
 }
 
 .footer {
