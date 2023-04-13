@@ -31,7 +31,7 @@
         </div>
         <ul class="nav-menu">
             <li class="nav-item"><a href="" class="contact-btn nav-sizing nohover">Kontakt</a></li>
-            <li class="nav-item"><a href="" class="about-us-btn nav-sizing nohover">O nas</a></li>
+            <li class="nav-item"><a href="/o-nas.html" class="about-us-btn nav-sizing nohover">O nas</a></li>
             <li class="nav-item"><a href="./" class="main-site-btn nav-sizing nohover">Strona główna</a></li>
         </ul>
         <div class="hamburger-menu">
@@ -79,37 +79,8 @@
 <script src="/js/lightbox-plus-jquery.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $(".owl-carousel").owlCarousel(
-            {
-                loop: false,
-                margin: 10,
-                nav: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    350: {
-                        items: 2
-                    },
-                    550: {
-                        items: 3
-                    },
-                    900: {
-                        items: 4
-                    },
-                    1024: {
-                        items: 5
-                    }
-                }
-            }
-        );
-    });
-</script>
-<script>
-    $(window).on('load', function () {
-        $(".loader-wrapper").hide();
-    });
+    loadOwlCarousele();
+    loaderFadeOut();
 </script>
 </body>
 </html>
