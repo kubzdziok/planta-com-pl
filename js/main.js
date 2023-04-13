@@ -7,7 +7,7 @@ hamburger.addEventListener("click", () => {
 })
 
 function loaderFadeOut() {
-    $(window).on('load', function () {
+    $(document).on('load', function () {
         $(".loader-wrapper").fadeOut();
     });
 }
