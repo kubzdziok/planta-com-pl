@@ -7,12 +7,9 @@ hamburger.addEventListener("click", () => {
 })
 
 function loaderFadeOut() {
-    document.fonts.ready.then( function () {
+    $(window).on('load', function () {
         $(".loader-wrapper").fadeOut();
-    })
-    // $(window).on('load', function () {
-    //     $(".loader-wrapper").fadeOut();
-    // });
+    });
 }
 
 function loadOwlCarousele() {
