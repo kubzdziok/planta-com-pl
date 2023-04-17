@@ -131,6 +131,7 @@ body .loader {
 }
 
 .site-selector {
+  margin-bottom: 20px;
   width: 100%;
   height: 700px;
   min-height: 60vh;
@@ -593,6 +594,7 @@ body .loader {
 
   // MAIN SITE CSS
   .site-selector {
+
     .main-container {
       grid-template-columns:repeat(1, 1fr);
       grid-template-rows: repeat(6, 1fr);
