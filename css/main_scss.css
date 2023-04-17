@@ -513,7 +513,7 @@ body .loader {
     text-align: center;
   }
   .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-text-div {
-    width: 85%;
+    width: 100%;
   }
 }
 @media (min-width: 767px) and (max-width: 1023px) {
