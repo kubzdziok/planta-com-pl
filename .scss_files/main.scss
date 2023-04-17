@@ -650,6 +650,10 @@ body .loader {
           .sub-list-text-div {
             width: 100%;
           }
+
+          .sub-list-text-div-projects, .sub-list-text-div-supervision, .sub-list-text-div-realizations, .sub-list-text-div-office {
+            width: 85%;
+          }
         }
       }
     }
