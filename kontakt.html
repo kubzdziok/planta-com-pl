@@ -33,9 +33,9 @@
             </a>
         </div>
         <ul class="nav-menu">
-            <li class="nav-item"><a href="/kontakt.html" class="contact-btn nav-sizing nohover">Kontakt</a></li>
-            <li class="nav-item"><a href="/o-nas.html" class="about-us-btn nav-sizing nohover">O nas</a></li>
             <li class="nav-item"><a href="./" class="main-site-btn nav-sizing nohover">Strona główna</a></li>
+            <li class="nav-item"><a href="/o-nas.html" class="about-us-btn nav-sizing nohover">O nas</a></li>
+            <li class="nav-item"><a href="/kontakt.html" class="contact-btn nav-sizing nohover">Kontakt</a></li>
         </ul>
         <div class="hamburger-menu">
             <span class="bar"></span>
@@ -47,16 +47,18 @@
 <section id="contact-main" class="sub-site-section">
     <div class="text-element sub-site-text contact-form-info">
         <div class="sub-site-desc-container">
-            <h1 class="sub-site-header-1">kontakt</h1>
+            <h1 class="sub-site-header-1 contact-page-info-h1">kontakt</h1>
             <h2 class="sub-site-header-2 contact-page-info-h2"></h2>
             <div class="phone-email-container">
                 <div class="phone-div">
                     <button class="call-us-btn" onclick="window.open('tel:+48555666888', '_self');">Zadzwoń</button>
-                    <p class="phone-number">555 666 888</p>
+                    <p id="phone-number-copy" class="phone-number" onclick="copyToClipboard('phone-number-copy', 'tooltip-phone')">555 666 888</p>
+                    <span id="tooltip-phone" class="tooltip">Skopiowano!</span>
                 </div>
                 <div class="email-div">
                     <button class="email-us-btn>" onclick="location.href='mailto:test123@wp.pl';">Napisz</button>
-                    <p class="email-address">asdadas@wp.pl</p>
+                    <p id="email-address-copy" class="email-address" onclick="copyToClipboard('email-address-copy', 'tooltip-email')">biuro@planta.com.pl</p>
+                    <span id="tooltip-email" class="tooltip">Skopiowano!</span>
                 </div>
             </div>
         </div>

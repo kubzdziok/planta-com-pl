@@ -4,7 +4,21 @@ const navMenu = document.querySelector(".nav-menu");
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-})
+});
+
+async function copyToClipboard(copyElementId, tooltipId) {
+    try {
+        let textToCopy = document.getElementById(copyElementId).innerHTML;
+        let tooltipSpan = document.getElementById(tooltipId);
+        await navigator.clipboard.writeText(textToCopy);
+        setTimeout(function () {
+            tooltipSpan.classList.toggle("active")
+        }, 1200)
+        tooltipSpan.classList.toggle("active");
+    } catch (err) {
+        console.error('Nie można skopiować: ', err);
+    }
+}
 
 function loaderFadeOut() {
     $(window).on('load', function () {

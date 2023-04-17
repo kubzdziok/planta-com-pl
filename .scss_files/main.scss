@@ -31,7 +31,7 @@ nav {
   margin: auto auto 30px;
 
   .nav-item {
-    float: right;
+    float: left;
   }
 
   .nav-float-logo {
@@ -45,9 +45,8 @@ nav {
   }
 
   ul {
-    width: 100%;
     height: auto;
-    margin: 15px 0 10px 0;
+    margin: 15px 0 10px auto;
     padding: 0;
 
     a:visited {
@@ -56,6 +55,7 @@ nav {
 
     li {
       text-transform: uppercase;
+      list-style-type: none;
 
       .nav-sizing {
         float: right;
@@ -354,21 +354,53 @@ body .loader {
   // CONTACT SUB-SITE CSS
   .contact-form-info {
     width: 54%;
-    padding-left: 20px;
+    //padding-left: 20px;
 
     .sub-site-desc-container {
 
       .sub-site-header-1 {
-          margin-bottom: 40px;
+        margin-bottom: 40px;
       }
 
       .phone-email-container {
+
         .phone-div, .email-div {
 
-          a, p {
+          span {
+            padding: 5px;
+            border: solid 1px $primary-green;
+            border-radius: 15px;
+            position: absolute;
+            transform: translate(-100%, -60%);
+            //display: none;
+          }
+
+          a, p, span {
             display: inline-block;
             font-family: $advent-font;
             letter-spacing: 1px;
+            cursor: pointer;
+          }
+
+          .tooltip {
+            transition: transform 0.5s ease-out;
+            display: none;
+          }
+          .tooltip::after {
+            content: " ";
+            position: absolute;
+            top: 100%; /* At the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $primary-green transparent transparent transparent;
+          }
+
+
+          .tooltip.active {
+            transition: transform 0.5s ease-in;
+            display: initial;
           }
 
           button {
@@ -380,7 +412,6 @@ body .loader {
             border: none;
             color: #FFFFFF;
             margin: 10px 10px 10px 0;
-            cursor: pointer;
             text-align: center;
 
             a {
@@ -492,23 +523,6 @@ body .loader {
   //END OF OWL CAROUSLE
 }
 
-.footer {
-  max-width: 1200px;
-  margin: auto;
-  color: #2C5545;
-
-  div {
-    font-size: 24px;
-    text-align: center;
-    width: 100%;
-    height: 100px;
-    background-color: #fff;
-    margin-top: 50px;
-    color: #2C5545;
-  }
-}
-
-
 // MOBILE VIEW
 @media (max-width: $media-max-mobile) {
 
@@ -541,7 +555,7 @@ body .loader {
           }
         }
 
-        .contact-btn, .about-us-btn {
+        .main-site-btn, .about-us-btn {
           border-bottom: solid 1px #FFFFFF;
         }
       }
@@ -642,8 +656,23 @@ body .loader {
 
       .sub-site-desc-container {
 
+        .phone-email-container {
+          width: fit-content;
+          margin: auto;
+
+          @media (max-width: 320px) {
+            .phone-div, .email-div {
+              text-align: center;
+            }
+          }
+        }
+
         .sub-site-header-1 {
           text-align: center;
+        }
+
+        .contact-page-info-h1 {
+          margin-bottom: 20px;
         }
 
         .sub-site-list {
