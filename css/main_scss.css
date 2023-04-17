@@ -9,7 +9,6 @@
 }
 
 nav {
-  margin: auto;
   max-width: 1200px;
   overflow: hidden;
   font-size: 14px;
@@ -18,7 +17,7 @@ nav {
   color: white;
   padding: 0 10px;
   display: flex;
-  margin-bottom: 30px;
+  margin: auto auto 30px;
 }
 nav .nav-item {
   float: right;
@@ -230,6 +229,9 @@ body .loader {
   float: left;
   margin-bottom: 30px;
 }
+.sub-site-section .contact-form-info {
+  float: right;
+}
 .sub-site-section .sub-site-text {
   width: 60%;
 }
@@ -251,7 +253,7 @@ body .loader {
   font-size: 32px;
   font-weight: 700;
 }
-.sub-site-section .sub-site-text .sub-site-desc-container .arrangements-h2, .sub-site-section .sub-site-text .sub-site-desc-container .about-us-h2 {
+.sub-site-section .sub-site-text .sub-site-desc-container .arrangements-h2, .sub-site-section .sub-site-text .sub-site-desc-container .about-us-h2, .sub-site-section .sub-site-text .sub-site-desc-container .contact-page-info-h2 {
   display: none;
 }
 .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list {
@@ -292,6 +294,72 @@ body .loader {
   max-height: 550px;
   width: 100%;
   object-fit: cover;
+}
+.sub-site-section .contact-form-info {
+  width: 54%;
+  padding-left: 20px;
+}
+.sub-site-section .contact-form-info .sub-site-desc-container .sub-site-header-1 {
+  margin-bottom: 40px;
+}
+.sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .phone-div a, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .phone-div p, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .email-div a, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .email-div p {
+  display: inline-block;
+  font-family: "Advent Pro", sans-serif;
+  letter-spacing: 1px;
+}
+.sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .phone-div button, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .email-div button {
+  width: 110px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #2C5545;
+  border: none;
+  color: #FFFFFF;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  text-align: center;
+}
+.sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .phone-div button a, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .email-div button a {
+  width: 100%;
+  height: 100%;
+}
+.sub-site-section .contact-form-form-div {
+  width: 46%;
+}
+.sub-site-section .contact-form-form-div form {
+  box-sizing: border-box;
+  font-family: "Advent Pro", sans-serif;
+  letter-spacing: 1px;
+}
+.sub-site-section .contact-form-form-div form .name, .sub-site-section .contact-form-form-div form .email, .sub-site-section .contact-form-form-div form .message-box {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: solid 1px #999999;
+  border-radius: 1px;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+}
+.sub-site-section .contact-form-form-div form .name, .sub-site-section .contact-form-form-div form .email {
+  height: 50px;
+}
+.sub-site-section .contact-form-form-div form .message-box {
+  height: 300px;
+  resize: vertical;
+}
+.sub-site-section .contact-form-form-div form button {
+  width: 160px;
+  height: 40px;
+  font-family: "Advent Pro", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #2C5545;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 .sub-site-section .carousele-element {
   overflow: hidden;

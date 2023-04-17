@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Skontaktuj się z nami | Planta</title>
+    <meta name="description"
+          content="Planta, projektowanie, wykonanie, nadzór, pielęgnacja zieleni i ogródów, pomoc w sprawach urzedowych oraz ich w ich prowadzeniu. Strona kontakt">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Lato:wght@400;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/css/main_scss.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link href="/css/lightbox.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="loader-wrapper">
+    <div class="loader"></div>
+</div>
+<header>
+    <nav class="navigation">
+        <div class="nav-float-logo nav-logo">
+            <a href="index.html">
+                <img alt="Planta - Logo" src="/images/planta-logo-full.webp">
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="/kontakt.html" class="contact-btn nav-sizing nohover">Kontakt</a></li>
+            <li class="nav-item"><a href="/o-nas.html" class="about-us-btn nav-sizing nohover">O nas</a></li>
+            <li class="nav-item"><a href="./" class="main-site-btn nav-sizing nohover">Strona główna</a></li>
+        </ul>
+        <div class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<section id="contact-main" class="sub-site-section">
+    <div class="text-element sub-site-text contact-form-info">
+        <div class="sub-site-desc-container">
+            <h1 class="sub-site-header-1">kontakt</h1>
+            <h2 class="sub-site-header-2 contact-page-info-h2"></h2>
+            <div class="phone-email-container">
+                <div class="phone-div">
+                    <button class="call-us-btn" onclick="window.open('tel:+48555666888', '_self');">Zadzwoń</button>
+                    <p class="phone-number">555 666 888</p>
+                </div>
+                <div class="email-div">
+                    <button class="email-us-btn>" onclick="location.href='mailto:test123@wp.pl';">Napisz</button>
+                    <p class="email-address">asdadas@wp.pl</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="image-element sub-site-image contact-form-form-div">
+        <form class="contact-form" action="https://formsubmit.co/8ec417b2e34cc77bf667646d134e04a2" method="POST">
+            <label>
+                Twoje Imię:
+                <input class="name" type="text" name="Imię" required>
+            </label>
+            <label>
+                Twój email:
+                <input class="email" type="email" name="email" required>
+            </label>
+            <label>
+                Treść:
+                <textarea class="message-box" name="Wiadomość" required></textarea>
+            </label>
+            <input type="hidden" name="_subject" value="Zapytanie ze strony!">
+            <input type="hidden" name="_next" value="https://google.pl">
+            <button type="submit">Wyślij</button>
+        </form>
+    </div>
+
+
+</section>
+<script src="/js/main.js"></script>
+<script src="/js/lightbox-plus-jquery.min.js"></script>
+<script type="text/javascript">
+    loaderFadeOut();
+</script>
+</body>
+</html>

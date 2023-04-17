@@ -20,7 +20,6 @@ $media-max-grid: 880px;
 }
 
 nav {
-  margin: auto;
   max-width: 1200px;
   overflow: hidden;
   font-size: 14px;
@@ -29,7 +28,7 @@ nav {
   color: white;
   padding: 0 10px;
   display: flex;
-  margin-bottom: 30px;
+  margin: auto auto 30px;
 
   .nav-item {
     float: right;
@@ -101,6 +100,7 @@ nav {
     }
   }
 }
+
 body .loader-wrapper {
   width: 100%;
   height: 100%;
@@ -122,8 +122,12 @@ body .loader {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .site-selector {
@@ -246,6 +250,7 @@ body .loader {
     grid-row: 2/3;
   }
 }
+
 // SUB-SITES CSS
 
 .sub-site-section {
@@ -263,6 +268,10 @@ body .loader {
   .sub-site-image, .sub-site-text {
     float: left;
     margin-bottom: 30px;
+  }
+
+  .contact-form-info {
+    float: right;
   }
 
   .sub-site-text {
@@ -288,9 +297,10 @@ body .loader {
         font-weight: 700;
       }
 
-      .arrangements-h2, .about-us-h2 {
+      .arrangements-h2, .about-us-h2, .contact-page-info-h2 {
         display: none;
       }
+
       .sub-site-list {
         vertical-align: baseline;
         padding-bottom: 20px;
@@ -319,7 +329,7 @@ body .loader {
           font-weight: 500;
         }
 
-        .about-us-text-div p:nth-child(1),  .about-us-text-div p:nth-child(2){
+        .about-us-text-div p:nth-child(1), .about-us-text-div p:nth-child(2) {
           padding-bottom: 15px;
         }
 
@@ -341,6 +351,92 @@ body .loader {
     }
   }
 
+  // CONTACT SUB-SITE CSS
+  .contact-form-info {
+    width: 54%;
+    padding-left: 20px;
+
+    .sub-site-desc-container {
+
+      .sub-site-header-1 {
+          margin-bottom: 40px;
+      }
+
+      .phone-email-container {
+        .phone-div, .email-div {
+
+          a, p {
+            display: inline-block;
+            font-family: $advent-font;
+            letter-spacing: 1px;
+          }
+
+          button {
+            width: 110px;
+            height: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            background-color: $primary-green;
+            border: none;
+            color: #FFFFFF;
+            margin: 10px 10px 10px 0;
+            cursor: pointer;
+            text-align: center;
+
+            a {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form-form-div {
+    width: 46%;
+
+    form {
+      box-sizing: border-box;
+      font-family: $advent-font;
+      letter-spacing: 1px;
+
+      .name, .email, .message-box {
+        margin-top: 5px;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: solid 1px #999999;
+        border-radius: 1px;
+        font-size: 14px;
+        font-family: $lato-font;
+      }
+
+      .name, .email {
+        height: 50px;
+      }
+
+      .message-box {
+        height: 300px;
+        resize: vertical;
+      }
+
+      button {
+        width: 160px;
+        height: 40px;
+        font-family: $advent-font;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
+        background-color: $primary-green;
+        border: none;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+  }
+
   // OWL CAROUSELE
   .carousele-element {
     overflow: hidden;
@@ -351,6 +447,7 @@ body .loader {
 
         .owl-item {
           overflow: hidden;
+
           a {
             img {
               height: 200px;
@@ -527,6 +624,7 @@ body .loader {
   // SUB SITES CSS
 
   .sub-site-section {
+
     .sub-site-image {
       padding: 0 3% 0 3%;
       width: 100%;
