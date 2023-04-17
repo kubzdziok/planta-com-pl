@@ -315,7 +315,8 @@ body .loader {
   cursor: pointer;
 }
 .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .phone-div .tooltip, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .email-div .tooltip {
-  transition: transform 0.5s ease-out;
+  opacity: 0;
+  transition: opacity 1s;
   display: none;
 }
 .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .phone-div .tooltip::after, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .email-div .tooltip::after {
@@ -329,7 +330,7 @@ body .loader {
   border-color: #2C5545 transparent transparent transparent;
 }
 .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .phone-div .tooltip.active, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .email-div .tooltip.active {
-  transition: transform 0.5s ease-in;
+  opacity: 1;
   display: initial;
 }
 .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .phone-div button, .sub-site-section .contact-form-info .sub-site-desc-container .phone-email-container .email-div button {
