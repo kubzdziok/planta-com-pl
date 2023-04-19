@@ -423,6 +423,44 @@ body .loader {
   background-color: #2C5545;
 }
 
+.thank-you-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  background-color: #2C5545;
+  font-family: "Advent Pro", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.thank-you-wrapper .thank-you-inner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.thank-you-wrapper .thank-you-inner-wrapper h1 {
+  padding-bottom: 10px;
+}
+.thank-you-wrapper .thank-you-inner-wrapper h2 {
+  padding-bottom: 40px;
+}
+.thank-you-wrapper .thank-you-inner-wrapper h3 span {
+  display: inline-block;
+}
+.thank-you-wrapper .thank-you-inner-wrapper h4 {
+  padding: 15px 0;
+  margin-top: 15px;
+}
+.thank-you-wrapper .thank-you-inner-wrapper h4 a {
+  padding: 12px;
+  border: solid 1px #FFFFFF;
+  border-radius: 1px;
+}
+
 @media (max-width: 767px) {
   header {
     margin-bottom: 15px;
@@ -546,6 +584,11 @@ body .loader {
   }
   .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-text-div-projects, .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-text-div-supervision, .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-text-div-realizations, .sub-site-section .sub-site-text .sub-site-desc-container .sub-site-list .sub-list-text-div-office {
     width: 85%;
+  }
+}
+@media (max-width: 767px) {
+  .thank-you-wrapper {
+    height: 100%;
   }
 }
 @media (min-width: 767px) and (max-width: 1023px) {
