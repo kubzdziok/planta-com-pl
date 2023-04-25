@@ -21,10 +21,14 @@ async function copyToClipboard(copyElementId, tooltipId) {
 }
 
 function loaderFadeOut() {
-    $(window).on('load', function () {
 
+    function fadeTimeout() {
         $(".loader-wrapper").fadeOut();
-    });
+    }
+
+    $(window).on('load', function () {
+        setTimeout(fadeTimeout, 400)
+    })
 }
 
 function loadOwlCarousele() {
